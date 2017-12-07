@@ -1,0 +1,242 @@
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+            
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+            <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+            <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <style>
+            .circle {
+                border-radius: 50%;
+                height:80px;
+                width:80px;
+                padding-top:20px;
+    
+            }
+    
+            .bg-red { background: #f44436; }
+            .text-red { color: #f44436; }
+            .text-white { color:white; }
+            .bigger110 { font-size: 110% }
+            .bigger120 { font-size: 120% }
+            .bigger130 { font-size: 130% }
+            .bigger140 { font-size: 140% }
+            .bigger150 { font-size: 150% }
+
+            .hidden { display: none; }
+        </style>
+    </head>
+    <body>
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">digitalWindow</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+    
+                <div class="container-fluid">
+    
+                    <div id="patient"  class="hidden">
+                        
+                        <div id="patient-1" class="hidden">
+                            <div class="row">
+                                <div class="col-sm-4 text-center">
+                                    <img src="vroom.png" style="height:200px;" alt="">
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="jumbotron">
+                                        <h1>Welcome Noelle</h1>
+                                        <p>My name is Choco the Bear and the Children Hospital of Orange County Welcomes you to our family</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 text-center">
+                                    <img src="group.png" style="height:400px;" class="text-center" alt="">
+                                </div>
+                                <div class="col-sm-6 text-center">
+                                    <img src="bear.png" style="height:400px;"  class="text-center" alt="">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div id="patient-2" class="hidden">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <img src="kabeer.png" alt="">
+                                    <h3>Dr. Mustafa Kabeer</h3>
+                                    <small>Admitting Physician</small>
+
+                                    <br /><br />
+
+                                    <img src="friendly.png" style="height: 150px" alt="">
+                                </div>
+                                <div class="col-sm-6 text-center">
+                                    <img src="phone.png" alt="" style="height: 700px;">
+                                </div>
+                                <div class="col-sm-3 text-center">
+                                    <img src="heart_dr.png" style="height: 150px;" alt="">
+                                    <h3>Heart Doctor</h3>
+                                    <small>Consultant</small>
+
+                                    <br /><br />
+
+                                    <img src="Tracy.png" style="height: 150px;" alt="">
+                                    <h3>Your Nurse</h3>
+                                    
+
+                                    <br /><br />
+
+                                    <img src="food_advisor.png" style="height: 150px;" alt="">
+                                    <h3>Food Advisor</h3>
+                                    
+
+                                    <br /><br />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="patient-3" class="hidden">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <h2>So Noelle</h2>
+
+                                    <div class="jumbotron">
+                                        <h1>Care Team</h1>
+                                        <p>Your care team is waiting for you in location 1</p>
+                                    </div>
+                                    <br />
+                                    <div class="jumbotron">
+                                        <h1>Need Direction</h1>
+                                        <p>Call me </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7">
+                                    <img src="er.png" style="height:100%;" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="physician" class="hidden">
+                        <div id="physician-1" class="hidden">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3>Welcome, Mustafa</h3>
+                                    <ul class="list-unstyled">
+                                        <li>Patients at CHOC for Pediatric Surgery</li>
+                                        <li>6th Floor – Noel – ROOM 602 </li>
+                                        <li></li>
+                                    </ul>
+
+                                    <h5>Previous Weeks</h5>
+                                    <span>11 Tasks remaining</span>
+                                    <span>7 Tasks completed</span>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <img src="noelle.png" style="height:700px;" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="physician-2" class="text-center hidden">
+                            <h3>Noell's Chart</h3>
+                            <img src="chart.png" style="height: 450px; text-align:center;" alt="">
+                        </div>
+                    </div>
+                </div>
+    
+            
+            <script>
+                var patientCont = $('#patient');
+                var physicianCont =$('#physician');
+                
+                function showPatient(){
+                    patientCont.removeClass('hidden');
+                    physicianCont.addClass('hidden');
+
+                    let arr = ['patient-1', 'patient-2', 'patient-3'];
+                    slideshow(arr);
+                }
+
+                function slideshow(arr){
+                    var timerCnt = 6000;
+                    var currentIndex = 0;
+                    
+                    function showContent(item){
+                        arr.forEach( (id) => {
+                            var el = $('#' + id);
+                            if(id == item){
+                                el.removeClass('hidden');
+                            }else{
+                                el.addClass('hidden');
+                            }
+                        })
+                        currentIndex = currentIndex + 1;
+                        if(currentIndex >= arr.length){ 
+                            return;
+                        }else{
+                            setTimeout( () => {
+                                showContent(arr[currentIndex])
+                            }, timerCnt)
+                        }
+                    }
+
+                    showContent(arr[currentIndex])
+
+                }
+
+                function showPhysician(){
+                    physicianCont.removeClass('hidden');
+                    patientCont.addClass('hidden');
+
+                    let arr = ['physician-1', 'physician-2'];
+                    slideshow(arr);
+                }
+            </script>
+    
+    </body>
+    </html>
