@@ -129,7 +129,17 @@
     
             function updateUser(data){
                 let temp = document.getElementById('user')
-                temp.innerHTML = data.rfid;
+//debugger;
+		if(!data.user.records) return;
+
+                temp.innerHTML = 
+			'<div class="jumbotron">' +
+			'<h1>Welcome ' + data.user.records[0].fields.Name +  ' </h1>' +
+			'<p>Visit Reason: ' + data.user.records[0].fields.VisitReason + '</p>' +
+			'<p>Favorite color: <span style="display:inline-block; background:' + data.user.records[0].fields.FavoriteColor + '; width:15px; height:15px;"></span></p>' +
+			'</div>' +
+			'<div>Your tag => ' + data.rfid + '</div>';
+console.log(data.user)
                 // let volts = document.getElementById('temp-volts')
                 // // Update our temperature using sensor
                 // temp.innerHTML = data.level;
