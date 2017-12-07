@@ -28,77 +28,192 @@
             .bigger130 { font-size: 130% }
             .bigger140 { font-size: 140% }
             .bigger150 { font-size: 150% }
+
+            .hidden { display: none; }
         </style>
     </head>
     <body>
-            
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">Smart Hospital</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Disabled</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
-    
-                <div class="container-fluid">
-    
-                    <div id="user"></div>
-                    
-                    <div class="row">
-                        
 
-    
-                    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Smart Hospital</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+
+	    <div class="row">
+	<div id="home" style="text-align:center;" class=" col-sm-12 text-center">
+		<img src="resources/choc.png" />
+	</div>
+	    </div>
+
+        <div id="patient"  class="hidden">
+
+            <div id="patient-1" class="hidden">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <img src="resources/vroom.png" style="height:200px;" alt="">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="jumbotron">
+                            <h1>Welcome Noelle</h1>
+                            <p>My name is Choco the Bear and the Children Hospital of Orange County Welcomes you to our family</p>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-sm-6 text-center">
+                        <img src="resources/group.png" style="height:400px;" class="text-center" alt="">
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img src="resources/bear.png" style="height:400px;"  class="text-center" alt="">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="patient-2" class="hidden">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="resources/kabeer.png" alt="">
+                        <h3>Dr. Mustafa Kabeer</h3>
+                        <small>Admitting Physician</small>
+
+                        <br /><br />
+
+                        <img src="resources/friendly.png" style="height: 150px" alt="">
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img src="resources/phone.png" alt="" style="height: 700px;">
+                    </div>
+                    <div class="col-sm-3 text-center">
+                        <img src="resources/heart_dr.png" style="height: 150px;" alt="">
+                        <h3>Heart Doctor</h3>
+                        <small>Consultant</small>
+
+                        <br /><br />
+
+                        <img src="resources/Tracy.png" style="height: 150px;" alt="">
+                        <h3>Your Nurse</h3>
+
+
+                        <br /><br />
+
+                        <img src="resources/food_advisor.png" style="height: 150px;" alt="">
+                        <h3>Food Advisor</h3>
+
+
+                        <br /><br />
+                    </div>
+                </div>
+            </div>
+
+            <div id="patient-3" class="hidden">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2>So Noelle</h2>
+
+                        <div class="jumbotron">
+                            <h1>Care Team</h1>
+                            <p>Your care team is waiting for you in location 1</p>
+                        </div>
+                        <br />
+                        <div class="jumbotron">
+                            <h1>Need Direction</h1>
+                            <p>Call me </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <img src="resources/er.png" style="height:100%;" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="physician" class="hidden">
+            <div id="physician-1" class="hidden">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3>Welcome, Mustafa</h3>
+                        <ul class="list-unstyled">
+                            <li>Patients at CHOC for Pediatric Surgery</li>
+                            <li>6th Floor – Noel – ROOM 602 </li>
+                            <li></li>
+                        </ul>
+
+                        <h5>Previous Weeks</h5>
+                        <span>11 Tasks remaining</span>
+                        <span>7 Tasks completed</span>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <img src="resources/noelle.png" style="height:700px;" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="physician-2" class="text-center hidden">
+                <h3>Noell's Chart</h3>
+                <img src="resources/chart.png" style="height: 450px; text-align:center;" alt="">
+            </div>
+        </div>
+    </div>
     
             
             <script>
-            var ws;
-            var _poll;
-            function init() {
+                var ws;
+                var _poll;
+                var lastType = '';
+
+                function init() {
                     // Connect to Web Socket
                     console.log('connecting to server')
                     //ws = new WebSocket("ws://192.168.1.107:9001/");
-		   ws = new WebSocket('ws://127.0.0.1:9001/')
+                    ws = new WebSocket('ws://127.0.0.1:9001/')
                     // Set event handlers.
-                    ws.onopen = function() {
-                            console.log("onopen");
+                    ws.onopen = function () {
+                        console.log("onopen");
                     };
-                    
-                    ws.onmessage = function(e) {
-                        try{
-                            let msg = JSON.parse(e.data);
+
+                    ws.onmessage = function (e) {
+                        try {
+                            var msg = JSON.parse(e.data);
                             console.log(msg);
-                            switch(msg.type){
+                            switch (msg.type) {
                                 case 'user_identified':
                                     updateUser(msg);
                                     break;
@@ -106,62 +221,124 @@
                                     updateTemp(msg);
                                     break;
                             }
-                        }catch(e){
+                        } catch (e) {
                             console.error(e);
                         }
-                            // e.data contains received string.
-                            console.log("onmessage: " + e.data);
+                        // e.data contains received string.
+                        console.log("onmessage: " + e.data);
                     };
-                    
-                    ws.onclose = function() {
-                            console.log("onclose");
+
+                    ws.onclose = function () {
+                        console.log("onclose");
                     };
-                    ws.onerror = function(e) {
-                            console.log("onerror");
-                            console.log(e)
+                    ws.onerror = function (e) {
+                        console.log("onerror");
+                        console.log(e)
                     };
-    
+
                     // _poll = setInterval( () => {
                     //     ws.send('show number'); 
                     // }, 500);
-            }
-    
-            function updateUser(data){
-                let temp = document.getElementById('user')
-		//if(!data.user.records) return;
+                }
 
-		var users = {
-			'0f0302865c': {
-				name: 'nicolle',
-				visitReason: 'Pancreatitis',
-				favoriteColor: 'blue'
-			},
-			'0415d7bff5': {
-				name: 'Doctor Maijoub',
-				visitReason: '',
-				favoriteColor: ''
-			}
-		};
+                function updateUser(data) {
+                    // let temp = document.getElementById('user')
+                    //if(!data.user.records) return;
 
-		var userData = users[data.rfid.toLowerCase()];
+                    var users = {
+                        '0f0302865c': {
+                            name: 'nicolle',
+                            visitReason: 'Pancreatitis',
+                            favoriteColor: 'blue',
+                            type: 'patient'
+                        },
+                        '0415d7bff5': {
+                            name: 'Doctor Maijoub',
+                            visitReason: '',
+                            favoriteColor: '',
+                            type: 'physician'
+                        }
+                    };
+
+                    var userData = users[data.rfid.toLowerCase()];
+
+                    if (userData.type == lastType) return;
+
+                    if (userData.type == 'patient') {
+                        showPatient();
+                    } else {
+                        showPhysician();
+                    }
+
+                    //    temp.innerHTML =
+                    // '<div class="jumbotron">' +
+                    // '<h1>Welcome ' + userData.name +  ' </h1>' +
+                    // '<p>Visit Reason: ' + userData.visitReason + '</p>' +
+                    // '<p>Favorite color: <span style="display:inline-block; background:' + userData.favoriteColor + '; width:15px; height:15px;"></span></p>' +
+                    // '</div>' +
+                    // '<div>Your tag => ' + data.rfid + '</div>';
+                    // let volts = document.getElementById('temp-volts')
+                    // // Update our temperature using sensor
+                    // temp.innerHTML = data.level;
+                    // volts.innerHTML = data.volts.toString() + ' volts';
+                    // TODO: Fetch outside weather conditions
+                }
 
 
-                temp.innerHTML = 
-			'<div class="jumbotron">' +
-			'<h1>Welcome ' + userData.name +  ' </h1>' +
-			'<p>Visit Reason: ' + userData.visitReason + '</p>' +
-			'<p>Favorite color: <span style="display:inline-block; background:' + userData.favoriteColor + '; width:15px; height:15px;"></span></p>' +
-			'</div>' +
-			'<div>Your tag => ' + data.rfid + '</div>';
-                // let volts = document.getElementById('temp-volts')
-                // // Update our temperature using sensor
-                // temp.innerHTML = data.level;
-                // volts.innerHTML = data.volts.toString() + ' volts';
-                // TODO: Fetch outside weather conditions
-            }
-    
-    
-            init();
+                init();
+
+                var patientCont = $('#patient');
+                var physicianCont = $('#physician');
+		var homeCont = $('#home');
+
+                function showPatient() {
+			homeCont.addClass('hidden');
+                    patientCont.removeClass('hidden');
+                    physicianCont.addClass('hidden');
+
+                    var arr = ['patient-1', 'patient-2', 'patient-3'];
+                    slideshow(arr);
+                }
+
+                function slideshow(arr) {
+                    var timerCnt = 6000;
+                    var currentIndex = 0;
+
+                    function showContent(item) {
+                        arr.forEach(function(id) {
+                            var el = $('#' + id);
+                            if (id == item) {
+                                el.removeClass('hidden');
+                            } else {
+                                el.addClass('hidden');
+                            }
+                        });
+
+                        currentIndex = currentIndex + 1;
+                        if (currentIndex >= arr.length) {
+                            return;
+                        } else {
+                            setTimeout(function () {
+                                showContent(arr[currentIndex]
+                        )
+                        },
+                            timerCnt
+                        )
+                        }
+                    }
+
+                    showContent(arr[currentIndex])
+
+                }
+
+                function showPhysician() {
+			homeCont.addClass('hidden');
+                    physicianCont.removeClass('hidden');
+                    patientCont.addClass('hidden');
+
+                    var arr = ['physician-1', 'physician-2'];
+                    slideshow(arr);
+                }
             </script>
     
     </body>
