@@ -88,6 +88,8 @@ def main():
                         port     = SERIAL_PORT,
                         stopbits = serial.STOPBITS_ONE,
                         timeout  = 1)
+    #webbrowser.open('file:///home/pi/RFID_POC/index.html',new='new')
+
 
     # Wrap everything in a try block to catch any exceptions.
     try:
@@ -102,16 +104,17 @@ def main():
 
             # If validate_rfid() returned a code, display it.
             if code:
-                print("Read RFID code: " + code);
+                #print("Read RFID code: " + code);
                 userData = {}
                 userData['rfid'] = code
                 userData['type'] = 'user_identified'
-                resp = requests.get('https://api.airtable.com/v0/appsQvYR5fOrntcrK/Users?view=Grid%20view&filterByFormula=(Tag="'+code+'")&api_key=keylGkO6A4FCxtKxS')
-                if resp.status_code != 200:
-                    # This means something went wrong.
-                    raise ApiError('GET /tasks/ {}'.format(resp.status_code))
-                userData['user'] = resp.json()
+                #resp = requests.get('https://api.airtable.com/v0/appsQvYR5fOrntcrK/Users?view=Grid%20view&filterByFormula=(Tag="'+code+'")&api_key=keylGkO6A4FCxtKxS')
+                #if resp.status_code != 200:
+                #    # This means something went wrong.
+                #    raise ApiError('GET /tasks/ {}'.format(resp.status_code))
+                #userData['user'] = resp.json()
                 server.send_message_to_all(json.dumps(userData))
+                print("Read RFID code: " + code + " And send websockets");
     except:
         # If we caught an exception, then disable the reader by setting
         # the pin to HIGH, then exit.

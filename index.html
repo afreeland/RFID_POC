@@ -5,14 +5,12 @@
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>Smart Hospital</title>
             
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+            <link rel="stylesheet" href="resources/bootstrap.min.css">
             <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
+            src="resources/jquery-3.2.1.min.js"></script>
             <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+            <script src="resources/popper.min.js"></script>
+            <script src="resources/bootstrap.min.js"></script>
         <style>
             .circle {
                 border-radius: 50%;
@@ -89,7 +87,8 @@
             function init() {
                     // Connect to Web Socket
                     console.log('connecting to server')
-                    ws = new WebSocket("ws://localhost:9001/");
+                    //ws = new WebSocket("ws://192.168.1.107:9001/");
+		   ws = new WebSocket('ws://127.0.0.1:9001/')
                     // Set event handlers.
                     ws.onopen = function() {
                             console.log("onopen");
@@ -129,17 +128,31 @@
     
             function updateUser(data){
                 let temp = document.getElementById('user')
-//debugger;
-		if(!data.user.records) return;
+		//if(!data.user.records) return;
+
+		var users = {
+			'0f0302865c': {
+				name: 'nicolle',
+				visitReason: 'Pancreatitis',
+				favoriteColor: 'blue'
+			},
+			'0415d7bff5': {
+				name: 'Doctor Maijoub',
+				visitReason: '',
+				favoriteColor: ''
+			}
+		};
+
+		var userData = users[data.rfid.toLowerCase()];
+
 
                 temp.innerHTML = 
 			'<div class="jumbotron">' +
-			'<h1>Welcome ' + data.user.records[0].fields.Name +  ' </h1>' +
-			'<p>Visit Reason: ' + data.user.records[0].fields.VisitReason + '</p>' +
-			'<p>Favorite color: <span style="display:inline-block; background:' + data.user.records[0].fields.FavoriteColor + '; width:15px; height:15px;"></span></p>' +
+			'<h1>Welcome ' + userData.name +  ' </h1>' +
+			'<p>Visit Reason: ' + userData.visitReason + '</p>' +
+			'<p>Favorite color: <span style="display:inline-block; background:' + userData.favoriteColor + '; width:15px; height:15px;"></span></p>' +
 			'</div>' +
 			'<div>Your tag => ' + data.rfid + '</div>';
-console.log(data.user)
                 // let volts = document.getElementById('temp-volts')
                 // // Update our temperature using sensor
                 // temp.innerHTML = data.level;
